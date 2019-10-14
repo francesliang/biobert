@@ -1,4 +1,5 @@
-tensorflow-gpu  >= 1.11.0  # GPU version of TensorFlow.
+#tensorflow-gpu  >= 1.11.0  # GPU version of TensorFlow.
+tensorflow == 1.14
 
 
 
