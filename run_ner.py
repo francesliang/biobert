@@ -207,9 +207,9 @@ class NerProcessor(DataProcessor):
         return examples
 
 
-def write_tokens(tokens,mode):
+def write_tokens(tokens,mode, output_dir):
     if mode=="test":
-        path = os.path.join(FLAGS.output_dir, "token_"+mode+".txt")
+        path = os.path.join(output_dir, "token_"+mode+".txt")
         wf = open(path,'a')
         for token in tokens:
             if token!="**NULL**":
@@ -298,7 +298,7 @@ def convert_single_example(ex_index, example, label_map, max_seq_length, tokeniz
         label_ids=label_ids,
         #label_mask = label_mask
     )
-    write_tokens(ntokens,mode)
+    #write_tokens(ntokens,mode, output_dir)
     return feature
 
 
